@@ -1,0 +1,60 @@
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C LCD(0x20, 16, 2);
+
+void setup() {
+  LCD.init();
+  LCD.backlight();
+}
+
+void loop() {
+
+  LCD.clear();
+  LCD.setCursor(2, 0);
+  LCD.print("believe");
+  delay(3000);
+
+  LCD.setCursor(2, 0);
+  LCD.print("believe in");
+  LCD.setCursor(4, 1);
+  LCD.print("me");
+  delay(3000);
+
+  LCD.clear();
+  LCD.setCursor(0, 0);
+  LCD.print("I'm here");
+  delay(3000);
+
+  LCD.setCursor(0, 0);
+  LCD.print("I'm here to");
+  LCD.setCursor(4, 1);
+  LCD.print("stay");
+  delay(2000);
+
+  LCD.clear();
+  LCD.setCursor(0, 0);
+  LCD.print("I will love");
+  delay(1000);
+
+  LCD.setCursor(4, 1);
+  LCD.print("you");
+  delay(2500);
+
+  LCD.clear();
+  LCD.setCursor(1, 0);
+  LCD.print("'til they");
+  delay(1000);
+
+  LCD.setCursor(6, 1);
+  LCD.print("take my");
+  delay(1000);
+
+  LCD.clear();
+  LCD.setCursor(3, 0);
+  LCD.print("heart");
+  delay(1000);
+  LCD.setCursor(7, 1);
+  LCD.print("away");
+  delay(2000);
+
+}
