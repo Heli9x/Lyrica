@@ -37,20 +37,6 @@ def sing_song(lyrics:list):
         thread.join()
 
 if __name__ == "__main__":
-    lyrics = [
-        ("\nDon't listen to them", 0.07, 0.3),
-        ("Cause what do they know", 0.05, 3.2),
-        ("We need each other", 0.07, 5.8),
-        ("to have, to hold", 0.07, 8.3),
-        ("They'll see in time", 0.08, 10.6),
-        ("I know\n", 0.07, 15.5),
-        ("When destiny calls you", 0.07, 20.8),
-        ("you must be strong", 0.07, 23.4),
-        ("I may not be with you", 0.07, 26.0),
-        ("But you've got to hold on", 0.07, 28.5),
-        ("They'll see in time", 0.08, 31.2),
-        ("I know", 0.07, 36.0),
-    ]
     #delays = [0.3, 3.2, 5.8, 8.3, 10.6, 15.5, 20.8, 23.4, 26.0, 28.5, 31.2, 36.0]
     song = load_lyrics("intoyouxbye.json")
     sing_song(song)
