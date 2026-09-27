@@ -1,8 +1,9 @@
 import time
 import sys
-from threading import Thread, lock
+from threading import Thread, Lock
 import json
 
+lock = Lock()
 def animate_text(text:str, speed:float):
     with lock:
         for char in text:
@@ -13,11 +14,11 @@ def animate_text(text:str, speed:float):
 
 def load_lyrics(filename:str):
     with open(filename, "r") as f:
-        lyrics = json.loads(f)
+        lyrics = json.load(f)
 
     return lyrics
 
-def sing_lyric(text:str, speed:float, delay:float):
+def sing_lyric(text:str, delay:float, speed:float):
     time.sleep(delay)
     animate_text(text, speed)
 
@@ -33,7 +34,7 @@ def sing_song(lyrics:list):
         t.start()
 
     for thread in threads:
-        threas.join()
+        thread.join()
 
 if __name__ == "__main__":
     lyrics = [
@@ -51,6 +52,8 @@ if __name__ == "__main__":
         ("I know", 0.07, 36.0),
     ]
     #delays = [0.3, 3.2, 5.8, 8.3, 10.6, 15.5, 20.8, 23.4, 26.0, 28.5, 31.2, 36.0]
-    sing_song(lyrics)
+    song = load_lyrics("intoyouxbye.json")
+    sing_song(song)
+    #sing_song(lyrics)
     
 
