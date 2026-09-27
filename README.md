@@ -1,0 +1,35 @@
+# Lyrica 
+credits to : [earllieetech](https://github.com/earllieetech/Coding)
+
+## How to use
+- create a json file of the lyrics you want to display using the following format and example:
+### format:
+  ```json
+  [
+    [text, delay, speed]
+  ]
+  ```
+### example:
+```json
+[
+    ["\n Before I make a move", 0.09, 0.3],
+    ["(Ooh-ooh-ooh-ooh-ooh)", 0.11, 2.7],
+    ["So baby, come light me up", 0.07, 5.4],
+    ["And maybe I'll let you on it", 0.07, 8.0],
+    ["A little bit dangerous", 0.07, 10.0],
+    ["But baby, that's how I want it", 0.07, 12.4],
+    ["A little less conversation, and", 0.06, 14.0],
+    ["A little more touch my body", 0.08, 15.5],
+    ["Cause I'm so into you, into you, into you", 0.10, 19.0]
+]
+```
+
+**Copyright note**
+<small>
+  The lyrics in this project are not owned by Heli9x Labs or its subsidiaries.
+</small>
+
+### what to do next:
+- copy the file to Lyrica.py's folder
+- edit line 41 under the the if statement to match the json filename you want to run.
+- run the file ```python3 Lyrica.py```
